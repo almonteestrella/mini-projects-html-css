@@ -1,0 +1,171 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary/main color */
+  --clear-primary-5: #8b4fd7;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --transition: all 0.5s ease-in-out;
+  --background: #dcd7da;
+  --primary-text: #8b4fd7;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --spacing: 0.1rem;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--clear-primary-5);
+  padding: 1rem;
+  border-radius: var(--radius);
+  color: #fff;
+  display: block;
+  margin: 3.5rem auto;
+  text-align: center;
+  width: 12rem;
+}
+
+/*
+=============== 
+main
+===============
+*/
+main {
+  background: var(--clear-primary-5);
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Container
+===============
+*/
+.container {
+  background: #fff;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 88vw;
+  border-radius: var(--radius);
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.section-title span:first-child {
+  background: var(--clear-primary-5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  display: inline-block;
+}
+
+.section-title h1 {
+  color: #1f1c3b;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.section-title p {
+  color: var(--primary-text);
+  width: 60%;
+  margin: 0 auto;
+  letter-spacing: var(--spacing);
+}
+
+/*
+=============== 
+cards
+===============
+*/
+
+.card {
+  box-shadow: var(--dark-shadow);
+}
+
+.card-1 {
+  background: url('./images/Cielo-estrellas.jpg');
+  max-width: 500px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.card-1 h1 {
+  color: #fff;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.card-2 img {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  width: 300px;
+  height: 150px;
+}
+
+.card-2 div {
+  padding: 1rem;
+}
+
+/*
+=============== 
+section center
+===============
+*/
+.section-center {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 300px;
+}
+
+@media screen and (max-width: 800px) {
+  .section-center {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card {
+    max-width: 500px;
+  }
+
+  .card-1 {
+    height: 300px;
+  }
+
+  .card-2 img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
